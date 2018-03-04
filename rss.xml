@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Arturo Romero Software Engineer]]></title><description><![CDATA[JavaScript Engineer in Porltand Oregon.]]></description><link>https://github.com/arturoromeroslc</link><generator>RSS for Node</generator><lastBuildDate>Sun, 04 Mar 2018 02:39:06 GMT</lastBuildDate><item><title><![CDATA[Object Assign]]></title><description><![CDATA[Immutability With Objects what is Immutable Data Immutable data presents a mutative API which does not update the data in-place, but instead…]]></description><link>https://github.com/arturoromeroslc/object-assign/</link><guid isPermaLink="false">https://github.com/arturoromeroslc/object-assign/</guid><pubDate>Sat, 03 Mar 2018 22:40:32 GMT</pubDate><content:encoded>&lt;h1&gt;Immutability With Objects&lt;/h1&gt;
+&lt;h4&gt;what is Immutable Data&lt;/h4&gt;
+&lt;p&gt;Immutable data presents a mutative API which does not update the data in-place, but instead yields new updated data.&lt;/p&gt;
+&lt;h5&gt;Example of mutable object&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;            const toggleTodo = (todos) =&gt; {
+                todos.completed = !s.completed;
+                return todos;
+            }&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h5&gt;Immutable Object with new object literal.&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;            const toggleTodo = (todos) =&gt; {
+                return {
+                    id: todos.id,
+                    text: todos.text,
+                    completed: !todos.completed
+                };
+            }&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Immutability&lt;/strong&gt; immutability allows you to optimize your application by making use of reference and value equality. This makes it easy to see if anything has changed. For example a state change in a React component. The &lt;strong&gt;&lt;em&gt;shouldComponentUpate&lt;/em&gt;&lt;/strong&gt; checks against to see if the state is identical by comparing state objects.&lt;/p&gt;
+&lt;h5&gt;Immutable Objects with ES2015 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign&quot;&gt;Object.assig()&lt;/a&gt;&lt;/h5&gt;
+&lt;p&gt;assign properties of several object onto target object. The argument order corresponds to the assign operator. The left argument is the ones whose property will be assigned to every further arguments will represent one of the source objects whose properties will be copied to the target object. If several sources represent the same properties the last one wins.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;                        const toggleTodo = (todos) =&gt; {
+                            return Object.assign({}, todos, {
+                                completed: !todo.completed
+                            });
+                        }&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h5&gt;Immuatable Objecs with ES2016 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator&quot;&gt;Spread operator&lt;/a&gt;.&lt;/h5&gt;
+&lt;p&gt;The spread operator allows an expression to be expanded in places where multiple arguments&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;                        const toggleTodo = (todos) =&gt; {
+                            return {
+                                ...todos,
+                                completed: !todo.completed
+                            };
+                        }&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;</content:encoded></item><item><title><![CDATA[Level One Algorithms]]></title><description><![CDATA[Simple Search (stupid search) With each guess in the list of elements, you’re eliminating only one number. If the number is at the end of…]]></description><link>https://github.com/arturoromeroslc/level-one-algorithms/</link><guid isPermaLink="false">https://github.com/arturoromeroslc/level-one-algorithms/</guid><pubDate>Thu, 01 Mar 2018 22:12:03 GMT</pubDate><content:encoded>&lt;ol&gt;
+&lt;li&gt;Simple Search (stupid search)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;With each guess in the list of elements, you’re eliminating only one number. If the number is at the end of list then it could take you the length of the list - 1 tries to guess the position of the element you are trying to find.&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Binary Search&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Whether you are searching for a person in the phone book, or a word in the dictionary. Even if a web application is searching a username in the database when the user signs, all of these problems are search problems and all of these cases use the sam algorithm to solve it, &lt;em&gt;binary search&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Binary search is an algorithm, where the input is a sorted list of elements. If the element you are looking for is in that list, binary search returns the position of the element where it’s located. Otherwise, binary search returns &lt;em&gt;null&lt;/em&gt;&lt;/p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;Example 1&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’m thinking of a number between 1 and 100.
+You have to guess the number in the fewest tries possible. With every guess your algorithm will tell you if your guess is too high or too low, or correct.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important: Is your guess is too high or too low, or correct.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;For the example problem we should start with 50 if it is too low then you juste limited half the numbers! Now you know that 1-50 are too low, and so your next guess would be 75. With binary search you eliminate half the numbers every time. Thats is it, let me repeat it again with binary search you eliminate have the numbers every time.&lt;/p&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;Example 2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Suppose you are looking for a word in the dictionary. The dictionary has 240,000 word. In the worst case, how many steps do you think binary search will take?&lt;/p&gt;
+&lt;p&gt;To solve the problem with binary search you cut the number of words in half until you’re left with only one word.&lt;/p&gt;
+&lt;p&gt;240k —&gt; 120k —&gt; 60k —&gt; 30k —&gt; 15k —&gt;7.5k —&gt; 3,750 —&gt; 1,875 —&gt; 938 —&gt; 469 —&gt; 235 —&gt; 118 —&gt; 59 —&gt;30 —&gt; 15 —&gt; 8 —&gt; 4 —&gt; 2 —1 BINGO it will take you 18 steps.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In general for a list of n, binary search will take you log₂n steps.&lt;/strong&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
