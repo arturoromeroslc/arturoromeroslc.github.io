@@ -5,7 +5,7 @@ module.exports = {
     description: 'JavaScript Engineer in Porltand Oregon.',
     siteUrl: 'https://github.com/arturoromeroslc',
   },
-  pathPrefix: '/arturo-romero-blog',
+  pathPrefix: '/arturoromeroslc.github.io',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
